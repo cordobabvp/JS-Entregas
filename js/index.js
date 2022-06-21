@@ -38,9 +38,9 @@ listaDeMonedas.push (moneda4)
 // debajo obtencion de datos a utilizar (variables/parametros)
 
 alert("Bienvenido al Banco de la Moneda");
-for(let i = 0; i < listaDeMonedas.length; i++) {
-    alert(`La cotización del ${listaDeMonedas[i].nombre} es: ${listaDeMonedas[i].precioVenta}$ venta, ${listaDeMonedas[i].precioCompra}$ compra.`)
-}
+//for(let i = 0; i < listaDeMonedas.length; i++) {
+//    alert(`La cotización del ${listaDeMonedas[i].nombre} es: ${listaDeMonedas[i].precioVenta}$ venta, ${listaDeMonedas[i].precioCompra}$ compra.`)
+//}
 let moneda = Number(prompt(`
         Seleccione tipo de moneda:
         1) Dolar
@@ -110,7 +110,22 @@ if(operacion === 2) {
 }
 
 //se declara una nueva variable con el valor de la funcion al ser llamada. despues se muestra esa varible como resultado
-
 let devolucion = calculadora();
-alert(`El monto correspondiente en ARS$ es ${devolucion}`);
+//alert(`El monto correspondiente en ARS$ es ${devolucion}`);
 
+
+//Recorro el array y por cada objeto creo una etiqueta li con sus propiedades. 
+//Append para inyectarlo al HTML en la clase monedas.
+const monedas = document.querySelector('.monedas');
+for(moneda of listaDeMonedas){
+    const li = document.createElement('li');
+    li.innerHTML = `<p>La cotización del ${moneda.nombre} es: ${moneda.precioVenta}$ Venta, ${moneda.precioCompra}$ Compra</p>`;
+    monedas.append(li);
+} 
+
+//Declaro nodo donde devuelvo mensaje con operacion final. 
+const divP = document.querySelector('.mensaje');
+
+divP.innerText = `El monto correspondiente en ARS$ es ${devolucion}`;
+
+//como meter las entradas del usuario en el HTml?
