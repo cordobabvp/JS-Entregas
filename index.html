@@ -7,13 +7,62 @@
     <title>Proyecto Banco de la Moneda</title>
 </head>
 <body>
-    <h1>Proyecto: Banco de la Moneda</h1>
-    <div class="monedas">
-    </div>
-    <div >
-        <h2>Operación realizada:</h2>
-        <p class="mensaje">Aca aparece la operación</p>
-    </div>
+    <div class="contenedor">
+        <h1>Proyecto: Banco de la Moneda</h1>
+        <div id="contbienvenida">
+            <p>Ingresa tus datos para acceder.</p>
+            <form id="bienvenida">
+                <input id="nombre" type="text" placeholder="Nombre">
+                <input id="apellido" type="text" placeholder="Apellido">
+                <input id="dni" type="number" placeholder="DNI">
+                <input id="ingresar" type="submit" value="Ingresar">
+            </form>
+        </div>
+        <div class="msjbienvenida"></div>
+        <div>
+            <button id="conversion">Conversión</button>
+        </div>
+        <div class="monedas"></div>
+        <form id="formConversion">
+            <select name="" id="operacion">
+                <option id="vender" type="text" value="Vender">Vender</option>
+                <option id="comprar"  type="text" value="Comprar">Comprar</option>
+            </select>
+            <input id="cantidad" type="number" placeholder="Cantidad">
+            <select name="" id="select">
+                <option id="dolar" name="Dolar" value="1">Dolar</option>
+                <option id="euro" name="Euro" value="2">Euro</option>
+                <option id="real" name="Real" value="3">Real</option>
+                <option id="uruguayo" name="Uruguayo" value="4">Uruguayo</option>
+            </select>
+            <input id="enviar" type="submit" value="Enviar">
+        </form>
+        <div id="solicitado"></div>
+        <div id="realizado"></div>
+        <div>
+            <button id="plazo fijo">Plazo Fijo</button>
+        </div>
+        <div id="contPlazo"></div>
+        <form id="formPlazo">
+            <input id="inputFijo" type="number" placeholder="Capital a invertir">
+            <input id="inputPLazo" type="number" placeholder="Plazo (en días)">
+            <input id="enviarPlazo" type="submit" value="Enviar">
+        </form>
+        <div>
+            <button id="prestamo">Préstamo</button>
+        </div>
+        <div id="contPrestamo"></div>
+        <form id="formPrestamo">
+            <input id="montoPrestamo" type="number" placeholder="Monto Solicitado">
+            <input type="radio" id="cuota3" name="cuotas" value="3">3 cuotas
+            <input type="radio" id="cuota6" name="cuotas" value="6">6 cuotas
+            <input type="radio" id="cuota12" name="cuotas" value="12">12 cuotas
+            <input type="radio" id="cuota24" name="cuotas" value="24">24 cuotas
+            <input type="radio" id="cuota36" name="cuotas" value="36">36 cuotas
+            <input id="enviarPrestamo" type="submit" value="Enviar">
+        </form>
+    </div>  
     <script src="js/index.js"></script>
+
 </body>
 </html>
