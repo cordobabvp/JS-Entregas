@@ -77,22 +77,41 @@ ocultarAcceso = () => {
 
 const usuarioSesion = []
 
+//ver bien validacion de usuario, casos mas especificos
 //Saludo de bienvenida
 bienvenida.addEventListener('submit', (e) => {
     e.preventDefault();
     nombreUsuario = nombre.value;
     apellidoUsuario = apellido.value;
     dniUsuario = dni.value;
+    if (typeof(dniUsuario === "number") && typeof(nombre.value) === "string" && typeof(apellidoUsuario) === "string"){
+        msjBienvenida.innerHTML = `<p>¡Hola ${nombre.value} ${apellido.value}! Te damos la bienvenida al Banco de la Moneda.</p>`;      
+    } else {
+        msjBienvenida.innerHTML = 'Ingresa correctamente tus datos'
+    }
+    postValidar();
+    Toastify({
+        text: "Has ingresado al Banco de la Moneda",
+        className: "info",
+        duration: 3000,
+        position: "right",
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        }
+    }).showToast();
+});
 
+//almacena datos en localStorage y muestra botones
+function postValidar() {    
     localStorage.setItem('nombreUsuario', nombre.value);
     localStorage.setItem('apellidoUsuario', apellido.value);
     localStorage.setItem('dni', dni.value);
-    msjBienvenida.innerHTML = `<p>¡Hola ${nombre.value} ${apellido.value}! Te damos la bienvenida al Banco de la Moneda.</p>`;
+    
     document.getElementById('contbienvenida').style.display = 'none';
     document.getElementById('conversion').style.display = '';
     document.getElementById('prestamo').style.display = '';
     document.getElementById('plazo fijo').style.display = '';
-});
+}
 
 //Funcion toma el texto del select moneda
 function textoMoneda() {
@@ -229,7 +248,8 @@ function numeroCuotas() {
         return memory
     }};
 }
-//Re gresa el monto a devolver en cuotas con interes.
+
+//Regresa el monto a devolver en cuotas con interes.
 function montoCuotas() {
     let monto = (montoPrestamo.value * interesPrestamo) / numeroCuotas();
     return monto;
