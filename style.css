@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Open Sans', sans-serif;;
+}
+body{
+    min-height: 100vh;
+}
+.cuerpoIndex{
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "operaciones interaccion movimientos";  
+    grid-template-columns: 15% 65% 20%;
+    grid-template-rows: 20% 80%;  
+}
+header{
+    grid-area: header;
+    background-color: rgba(29, 82, 143, 0.582);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titulo{
+    color:antiquewhite;
+    padding: 10px;
+}
+#logo{
+    height: 40px;
+    width: 40px;
+}
+.operaciones{
+    grid-area: operaciones;
+    background-color: rgba(178, 173, 247, 0.849);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+.interaccion{
+    grid-area: interaccion;
+    background-color: rgba(230, 218, 248, 0.726);
+    display: flex;
+    justify-content:center;
+    align-items: center;    
+    padding: 30px;
+}
+#cuerpoMovimientos{
+    background-color: rgba(178, 173, 247, 0.849);
+    grid-area: movimientos;
+}
+
+#contbienvenida{
+    text-align: center;
+}
+#bienvenida {
+    background-color: white;
+    margin: auto;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px;
+    font-size: 20px;
+}
+.msjbienvenida{
+    font-size: 30px;
+    text-align: center;
+}
+.input {
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    background: none;
+    text-align: center;
+    border-bottom: 1px solid grey;
+    row-gap: 30px;
+}
+#ingresar {
+    background-color: rgba(53, 53, 211, 0.726);
+    border-radius: 5px;
+    color: white;
+    border: none;
+    padding: 3px;
+}
+.boton {
+    width: 150px;
+    padding: 5px;
+    background-color: rgba(30, 143, 255, 0.479);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px -5px;
+    font-size: 20px;
+    color: antiquewhite;
+}
+.contBoton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#contCrypto{
+    gap: 15px;
+    display:table;
+    justify-content: center;
+    flex-direction: column;
+}
+.cardCrypto{
+    background-color:beige;
+    border-radius: 5px;
+    padding: 5px;
+    display:inline-table;
+    text-align: center;
+    margin: 5px;
+}
+.imgCrypto{
+    border-radius: 60%;
+    height: 50px;
+    width: 50px;
+}
+.ocultar {
+    display: none;
+}
+.mostrar {
+    display: block;
+}
+#movimientos{
+    padding: 0 15px 0 15px;
+}
+#contMovimientos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 5px;
+    color: antiquewhite;
+    font-size: 20px;
+}
+#contTituloMov{
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 0px;
+    color: antiquewhite;
+    border-bottom: 2px solid antiquewhite;
+    height: fit-content;
+    width: 100%;
+}
+#contConversion{
+    margin-bottom: 30px;
+    text-align: justify;
+    grid-area: contConversion;
+}
+#contPrestamo{
+    margin-bottom: 30px;
+    text-align: justify;
+}
+#contTurno{
+    margin-bottom: 30px;
+}
+.form-control{
+    width: 200px;
+}
+.form-select{
+    width: 200px;
+}
+#contPlazo{
+    margin-bottom: 30px;
+}
+.limpiar{
+    width: 98px;
+    margin: 5px 0 5px 0
+}
+.enviar{
+    width: 98px;
+    margin: 5px 0 5px 0
+}
+.confirmar{
+    width: 98px;
+    border-radius: 5px;
+    border: solid 1px;
+}
+.plazofijo{
+    row-gap: 15px;
+}
+#formTurno{
+    border-radius: 5px;
+    border: solid 3px rgba(173, 173, 173, 0.432);
+    padding: 10px;
+}
+#carrito{
+    display:inline-flex;
+}
+.liCarrito {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+.imgCardsCarrito{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}

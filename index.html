@@ -4,69 +4,113 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Banco de la Moneda</title>
+    <title>Banco de la Moneda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+2&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="contenedor">
-        <h1>Proyecto: Banco de la Moneda</h1>
-        <div id="contbienvenida">
-            <p>Ingresa tus datos para acceder.</p>
-            <form id="bienvenida">
-                <input id="nombre" type="text" placeholder="Nombre" >
-                <input id="apellido" type="text" placeholder="Apellido" >
-                <input id="dni" type="number" placeholder="DNI" >
-                <input id="ingresar" type="submit" value="Ingresar">
-            </form>
-        </div>
-        <div class="msjbienvenida"></div>
-        <div>
-            <button id="conversion">Conversión</button>
-        </div>
-        <div class="monedas"></div>
-        <form id="formConversion">
-            <select name="" id="operacion">
-                <option id="vender" type="text" value="Vender">Vender</option>
-                <option id="comprar"  type="text" value="Comprar">Comprar</option>
-            </select>
-            <input id="cantidad" type="number" placeholder="Cantidad">
-            <select name="" id="select">
-                <option id="dolar" name="Dolar" value="1">Dolar</option>
-                <option id="euro" name="Euro" value="2">Euro</option>
-                <option id="real" name="Real" value="3">Real</option>
-                <option id="uruguayo" name="Uruguayo" value="4">Uruguayo</option>
-            </select>
-            <input id="enviar" type="submit" value="Enviar">
-        </form>
-        <div id="solicitado"></div>
-        <div id="realizado"></div>
-        <div>
-            <button id="plazo fijo">Plazo Fijo</button>
-        </div>
-        <div id="contPlazo"></div>
-        <form id="formPlazo">
-            <input id="inputFijo" type="number" placeholder="Capital a invertir">
-            <input id="inputPLazo" type="number" placeholder="Plazo (en días)">
-            <input id="enviarPlazo" type="submit" value="Enviar">
-        </form>
-        <div>
-            <button id="prestamo">Préstamo</button>
-        </div>
-        <div id="contPrestamo"></div>
-        <form id="formPrestamo">
-            <input id="montoPrestamo" type="number" placeholder="Monto Solicitado">
-            <input type="radio" id="cuota3" name="cuotas" value="3">3 cuotas
-            <input type="radio" id="cuota6" name="cuotas" value="6">6 cuotas
-            <input type="radio" id="cuota12" name="cuotas" value="12">12 cuotas
-            <input type="radio" id="cuota24" name="cuotas" value="24">24 cuotas
-            <input type="radio" id="cuota36" name="cuotas" value="36">36 cuotas
-            <input id="enviarPrestamo" type="submit" value="Enviar">
-        </form>
-    </div>
+<body class="cuerpoIndex">
+    <header>
+        <h1 class="titulo">Banco de la Moneda</h1>
+        <img id="logo" src="/images/icono.png" alt="logo">
+    </header>
 
+        <div class="operaciones">
+            <div class="contBoton">
+                <button id="conversion" class="boton">CONVERSIÓN</button>
+            </div>
+            <div class="contBoton">
+                <button id="crypto" class="boton">CRYPTO</button>
+            </div>
+            <div class="contBoton">
+                <button id="plazo fijo" class="boton">PLAZO FIJO</button>
+            </div>
+            <div class="contBoton">
+                <button id="prestamo" class="boton">PRÉSTAMO</button>
+            </div>
+            <div class="contBoton">
+                <button id="turno" class="boton">TURNO</button>
+            </div>
+        </div>
+        <div class="interaccion">
+            <div id="contbienvenida">    
+                <form id="bienvenida">
+                    <p>Ingresa a tu cuenta</p>
+                    <input id="usuario" class="input" type="text" placeholder="Usuario" >
+                    <input id="contraseña" class="input" type="password" placeholder="Contraseña">
+                    <input id="dni" class="input" type="number" placeholder="DNI" >
+                    <input id="ingresar"  type="submit" value="Ingresar">
+                </form>
+            </div>
+            <div class="msjbienvenida"></div>
+
+            <div id="conversor" class="conversor">
+                <div id="contConversion"></div>
+                <form id="formConversion">
+                    <select name="" id="operacion" class="form-select form-select-sm">
+                        <option id="vender" type="text" value="Vender">Vender</option>
+                        <option id="comprar"  type="text" value="Comprar">Comprar</option>
+                    </select>
+                    <input id="cantidad" type="number" placeholder="Cantidad" class="form-control form-control-sm">
+                    <select name="" id="select" class="form-select form-select-sm">
+                        <option id="dolar" name="Dolar" value="1">Dolar</option>
+                        <option id="euro" name="Euro" value="2">Euro</option>
+                        <option id="real" name="Real" value="3">Real</option>
+                        <option id="uruguayo" name="Uruguayo" value="4">Uruguayo</option>
+                    </select>
+                    <input class="enviar" type="submit" value="Enviar" >
+                    <input class="limpiar" type="reset" value="Limpiar">
+                </form>
+            </div>
+            <div id="cuerpoCrypto">
+                <div id="contCrypto" class="contCrypto"></div>
+                <div id="carrito"></div>
+            </div>
+
+            <div id="cuerpoPlazo">
+                <div id="contPlazo"></div>
+                <div class="plazofijo">
+                    <form id="formPlazo">
+                    <input id="inputFijo" type="number" placeholder="Capital a invertir"class="form-control form-control-sm">
+                    <input id="inputPlazo" type="number" placeholder="Plazo (en días)"class="form-control form-control-sm">
+                    <input class="enviar" type="submit" value="Enviar"class="form-control form-control-sm">
+                    <input class="limpiar" type="reset" value="Limpiar"class="form-control form-control-sm">
+                    </form>
+                </div>
+            </div>
+
+            <div id="cuerpoPrestamo">
+                <div id="contPrestamo"></div>
+                <form id="formPrestamo">
+                    <input id="montoPrestamo" type="number" placeholder="Monto Solicitado" class="form-control form-control-sm">
+                    <input type="radio" id="cuota12" name="cuotas" value="12" required="" > 12 Meses
+                    <input type="radio" id="cuota24" name="cuotas" value="24"> 24 Meses
+                    <input type="radio" id="cuota36" name="cuotas" value="36" > 36 Meses
+                    <input type="radio" id="cuota48" name="cuotas" value="48"> 48 Meses
+                    <input type="radio" id="cuota60" name="cuotas" value="60"> 60 Meses
+                    <input class="enviar" type="submit" value="Enviar" class="form-control form-control-sm">
+                    <input class="limpiar" type="reset" value="Limpiar" class="form-control form-control-sm">
+                </form>
+            </div>
+                
+            <div id="cuerpoTurno">
+                <div id="contTurno"></div>
+                <input id="formTurno" type="datetime-local" class="form-control form-control-lg" min="date" max="2022-10-31">
+            </div>
+        </div>
+        <div id="cuerpoMovimientos">
+            <div id="movimientos">
+                <div id="contTituloMov"><h4 id="tituloMov">MOVIMIENTOS</h4></div>
+                <div id="contMovimientos"></div>
+            </div>
+        </div>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="js/index.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

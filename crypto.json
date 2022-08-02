@@ -1,0 +1,45 @@
+[
+    {
+        "name": "Bitcoin",
+        "price": "21300",
+        "img": "images/bitcoin.png",
+        "id": "001"
+    },
+    {
+        "name": "Dash",
+        "price": "47",
+        "img": "/images/dash.png",
+        "id": "002"
+    },
+    {
+        "name": "Ether",
+        "price": "1130",
+        "img": "/images/ether.png",
+        "id":"004"
+    },
+    {
+        "name": "Monero",
+        "price": "120000",
+        "img":"/images/monero.png",
+        "id": "005"
+    },
+
+    {
+        "name": "Solana",
+        "price": "34",
+        "img": "/images/solana.png",
+        "id": "006"
+    },
+    {
+        "name": "BNB",
+        "price": "220",
+        "img": "/images/bnb.png",
+        "id": "007"
+    },
+    {
+        "name": "Tether",
+        "price": "1",
+        "img": "/images/tether.png",
+        "id": "08"
+    }
+]
